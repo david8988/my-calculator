@@ -3,6 +3,7 @@ let numbersArr=Array.from(document.querySelectorAll('button.numbersAndDot'));
 let operatorsArr=Array.from(document.querySelectorAll("button.operatorSimbol"));
 //console.log(operatorsArr)
 let detailsOfCalculus=document.querySelector(".detailsOfCalculus");
+let detailsContainer=document.querySelector(".detailsContainer");
 let resultBox=document.querySelector(".resultBox");
 let clearButtonsArr=Array.from(document.querySelectorAll("button.clearBtn"));// CE C ⌫
 
@@ -17,7 +18,7 @@ function operate(e){
 
     if(equalCount!==0){
         resultBox.classList.remove("enlarge");
-        detailsOfCalculus.classList.remove("hide");
+        detailsContainer.classList.remove("hide");
         detailsOfCalculus.textContent="";
         resultBox.textContent="";
         equalCount=0;
@@ -221,7 +222,7 @@ function operate(e){
     if(e.keyCode===46){
         if(resultBox.classList.contains("enlarge")){
             resultBox.classList.remove("enlarge");
-            detailsOfCalculus.classList.remove("hide");
+            detailsContainer.classList.remove("hide");
             detailsOfCalculus.textContent="";
             resultBox.textContent="";
         }
@@ -283,7 +284,7 @@ function operate(e){
                    
                     
                     resultBox.classList.add("enlarge");
-                    detailsOfCalculus.classList.add("hide");
+                    detailsContainer.classList.add("hide");
                     equalCount++;
                 }
                 
@@ -293,7 +294,7 @@ function operate(e){
                 calculate(detailsOfCalculus.textContent)
                 resultBox.textContent=calculate(detailsOfCalculus.textContent);
                 resultBox.classList.add("enlarge");
-                    detailsOfCalculus.classList.add("hide");
+                detailsContainer.classList.add("hide");
                     equalCount++;
             }
     }
@@ -357,7 +358,7 @@ clearButtonsArr.forEach(btn=>btn.addEventListener("click",function(){
     }else if(btn.textContent==="CE"){
         if(resultBox.classList.contains("enlarge")){
             resultBox.classList.remove("enlarge");
-            detailsOfCalculus.classList.remove("hide");
+            detailsContainer.classList.remove("hide");
             detailsOfCalculus.textContent="";
             resultBox.textContent="";
         }
@@ -446,7 +447,7 @@ clearButtonsArr.forEach(btn=>btn.addEventListener("click",function(){
 numbersArr.forEach(btn=>btn.addEventListener("click",function(){
     if(equalCount!==0){
         resultBox.classList.remove("enlarge");
-        detailsOfCalculus.classList.remove("hide");
+        detailsContainer.classList.remove("hide");
         detailsOfCalculus.textContent="";
         resultBox.textContent="";
         equalCount=0;
@@ -504,7 +505,7 @@ numbersArr.forEach(btn=>btn.addEventListener("click",function(){
 operatorsArr.forEach(btn=>btn.addEventListener("click",function(){
     if(equalCount!==0){
         resultBox.classList.remove("enlarge");
-        detailsOfCalculus.classList.remove("hide");
+        detailsContainer.classList.remove("hide");
         detailsOfCalculus.textContent=resultBox.textContent;
         resultBox.textContent="";
         equalCount=0;
@@ -523,7 +524,7 @@ operatorsArr.forEach(btn=>btn.addEventListener("click",function(){
                 console.log("agrandar el resultado")
                 console.log(detailsOfCalculus.textContent);
                 resultBox.classList.add("enlarge");
-                detailsOfCalculus.classList.add("hide");
+                detailsContainer.classList.add("hide");
                 equalCount++;
             }
             
@@ -533,7 +534,7 @@ operatorsArr.forEach(btn=>btn.addEventListener("click",function(){
             calculate(detailsOfCalculus.textContent)
             resultBox.textContent=calculate(detailsOfCalculus.textContent);
             resultBox.classList.add("enlarge");
-                detailsOfCalculus.classList.add("hide");
+            detailsContainer.classList.add("hide");
                 equalCount++;
         }
     }else{

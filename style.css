@@ -5,6 +5,7 @@ body{
     align-items: center;
     justify-content: center;
     display:flex;
+    font-size:45px;
     
 }
 
@@ -21,11 +22,11 @@ body{
 }
 
 .calculatorContainer{
-    width: 50%;
-    height:60%;
-    background-color: rgb(165, 164, 164) ;;
+    width: 70%;
+    height:70%;
+    background-color: rgb(171, 209, 99) ;;
     display:grid;   
-    grid-template-rows: 30% 10% 60%;
+    grid-template-rows: 39% 1% 60%;
     grid-gap: 0;
     border: 2px solid black ;
 
@@ -36,30 +37,45 @@ body{
     display:flex;
     flex-direction: column;    
     text-align:right;
-    background-color:rgb(165, 164, 164) ;
+    background-color:rgb(41, 11, 112) ;
+    max-width:100%;
+    overflow: auto;
+    position: relative;
     
-
 }
 
+.detailsContainer{
+    height:40%;
+    max-height: 40%;
+    
+    
+}
 .detailsOfCalculus{
-    height:35%;
-    background-color:rgb(165, 164, 164);
-    font-size:1rem;
-    padding-right:20px;
+    height:100%;
+    max-height: 100%;
+    background-color:rgb(41, 11, 112);
+    font-size:4vw;
+    padding:20px 20px;
+    white-space: nowrap;
+    color:rgb(169, 179, 175);
 }
 
 .resultBox{
     height: 60%;
-    background-color:rgb(165, 164, 164);
-    font-size:2rem;
+    background-color:rgb(41, 11,112);
+    font-size:6vw;
     padding-right:10px;
+    color:rgb(177, 206, 50);
+    position: sticky;
+    left:0; 
 }
 
 .memoryButtonsContainer{
-    display:grid;
+    /*display:grid;
     grid-template-columns: 16% 16% 16% 16% 16% 16%;
     grid-gap: 0.8%;
-    margin: 0.8% 0.8%;
+    margin: 0.8% 0.8%;*/
+    background-color:rgb(28, 56, 134);
 }
 
 .memoryBtnDiv{
@@ -77,9 +93,9 @@ body{
 
 
 .calcOperatorsGrid{
-    background-color: rgb(165, 164, 164) ;;
+    background-color: rgb(202, 24, 24) ;;
     display:grid;   
-    grid-template-rows: 16% 16% 16% 16% 16% 16%;
+    grid-template-rows: 19% 19% 19% 19% 19%;
     grid-template-columns: 24.4% 24.4% 24.4% 24.4%;
     grid-gap: 0.8%;
     margin: 0.8% 0.8%;
@@ -94,7 +110,8 @@ body{
 .operatorButton{
     width:100%;
     height: 100%;
-    font-size: 1rem;
+    font-size: 2.5vw;
+    font-weight: bold;
 }
 
 .hide{
@@ -102,8 +119,32 @@ body{
 }
 
 .enlarge{
-    font-size:3rem;
+    font-size:7.5vw;
+    padding-top:30px;
+    padding-right: 30px;
+
 }
+
+@media (max-width: 800px){
+    .calculatorContainer{
+      width:70%;
+      height: 80%;
+    }
+    .container{
+        width:90%;
+        height:80%;
+    }
+    .OperatorButtonDiv{
+        position: relative;
+        
+    }
+
+    .operatorButton{
+        bottom:35%;
+        position: relative;
+    }
+  }
+
 
 @media (max-width: 600px){
     .calculatorContainer{
@@ -114,17 +155,39 @@ body{
         width:90%;
         height:80%;
     }
+    .OperatorButtonDiv{
+        position: relative;
+        
+    }
+
+    .operatorButton{
+        bottom:35%;
+        position: relative;
+    }
   }
 
   
 @media (max-width: 370px){
     .calculatorContainer{
-      width:100%;
-      height: 80%;
+      width:100vw;
+      height: 100vh;
     }
 
     .container{
-        width:100%;
-        height:80%;
+        width:100vw;
+        height:100vh;
     }
+
+    
+
+    .OperatorButtonDiv{
+        position: relative;
+        
+    }
+
+    .operatorButton{
+        bottom:15%;
+        position: relative;
+    }
+
   }
