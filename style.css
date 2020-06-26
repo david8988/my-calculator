@@ -10,15 +10,27 @@ body{
 }
 
 .container{
-    background-color: rgb(115, 115, 172);
+    background-color: rgb(0, 0, 0);
     width:80vw;
     height:80vw;
     align-items: center;
     justify-content: center;
     display:flex;
     flex-direction: column;
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRkCFt21DT1xR7h19cRm-vUSiP5a7MHWaZGaw&usqp=CAU");
     
-    
+}
+
+.myCalcTitle{
+    margin-bottom:50px;
+     font-family: Roboto,
+     sans-serif;font-size:2em;
+     color:rgb(55, 56, 53);
+     background-color:rgb(81, 165, 243);
+     padding:5px;
+     border:black solid 1px;
+     
+     
 }
 
 .calculatorContainer{
@@ -41,7 +53,7 @@ body{
     max-width:100%;
     overflow: auto;
     position: relative;
-    
+    min-height:130px;
 }
 
 .detailsContainer{
@@ -53,6 +65,7 @@ body{
 .detailsOfCalculus{
     height:100%;
     max-height: 100%;
+   /* min-height:50px;*/
     background-color:rgb(41, 11, 112);
     font-size:4vw;
     padding:20px 20px;
@@ -61,13 +74,16 @@ body{
 }
 
 .resultBox{
+   /* min-height:80px;*/
     height: 60%;
     background-color:rgb(41, 11,112);
     font-size:6vw;
     padding-right:10px;
     color:rgb(177, 206, 50);
     position: sticky;
-    left:0; 
+    
+    
+    
 }
 
 .memoryButtonsContainer{
@@ -125,6 +141,32 @@ body{
 
 }
 
+@media (max-width: 950px){
+    .calculatorContainer{
+      width:70%;
+      height: 80%;
+    }
+    .container{
+        width:90%;
+        height:80%;
+    }
+
+    .myCalcTitle{
+        font-size:1.5em;
+    }
+    .OperatorButtonDiv{
+        position: relative;
+        
+    }
+
+    .operatorButton{
+        bottom:30%;
+        position: relative;
+    }
+  }
+
+
+
 @media (max-width: 800px){
     .calculatorContainer{
       width:70%;
@@ -133,6 +175,10 @@ body{
     .container{
         width:90%;
         height:80%;
+    }
+
+    .myCalcTitle{
+        font-size:1.5em;
     }
     .OperatorButtonDiv{
         position: relative;
@@ -155,13 +201,17 @@ body{
         width:90%;
         height:80%;
     }
+
+    .myCalcTitle{
+        font-size:1em;
+    }
     .OperatorButtonDiv{
         position: relative;
         
     }
 
     .operatorButton{
-        bottom:35%;
+        bottom:30%;
         position: relative;
     }
   }
@@ -174,11 +224,15 @@ body{
     }
 
     .container{
+        padding-top:50px;
         width:100vw;
         height:100vh;
     }
 
-    
+    .myCalcTitle{
+        font-size:0.6em;
+        margin-bottom:10px;
+    }
 
     .OperatorButtonDiv{
         position: relative;
@@ -188,6 +242,19 @@ body{
     .operatorButton{
         bottom:15%;
         position: relative;
+        font-size:2.5vh;
+    }
+
+    .detailsOfCalculus{
+        font-size:4vh;
+    }
+
+    .resultBox{
+        font-size:6vh;
+    }
+
+    .enlarge{
+        font-size:7.5vh;
     }
 
   }
